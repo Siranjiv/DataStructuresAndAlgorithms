@@ -2,18 +2,18 @@
 
 using namespace std;
 
-
+    //This is to create a Node in Doubly LinkedList
 	class Node{
-        private:
+        public:
             int value;
             Node* next;
             Node* prev;
 
-        Node(int value) {
-            this->value = value;
-            next =nullptr;
-            prev =nullptr;
-        }
+            Node(int value) {
+                this->value = value;
+                next =nullptr;
+                prev =nullptr;
+            }
     };
 
 
@@ -24,8 +24,13 @@ class DoublyLinkedList {
         int length;
 
     public:
+    //This is to create a Constructor for LinkedList
 		DoublyLinkedList(int value) {
-            
+            Node* newNode = new Node(value);
+            head= newNode;
+            tail = newNode;
+            length = 1;
+
         }
 
         ~DoublyLinkedList() {
