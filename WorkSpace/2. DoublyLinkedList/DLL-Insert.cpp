@@ -154,7 +154,7 @@ class DoublyLinkedList {
                 prepend(value);
                 return true;
             }
-            if(index == length) {s
+            if(index == length) {
                 append(value);
                 return true;
             }
