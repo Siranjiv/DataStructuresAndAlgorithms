@@ -29,15 +29,6 @@ class Queue {
             length = 1;
         }
 
-        ~Queue() {
-            Node* temp = first;
-            while (first) {
-                first = first->next;
-                delete temp;
-                temp = first;
-            }
-        }
-
         void printQueue() {
             Node* temp = first;
             while (temp) {
@@ -65,15 +56,20 @@ class Queue {
         void getLength() {
             cout << "Length: " << length << endl;
         }
-        
+
         bool isEmpty() {
             if (length == 0) return true;
             return false;
         }
-        //The Function to add value to a queue
+
+        int firstValue() { 
+            if (first) return first->value;
+            return INT_MIN;
+        }
+
         void enqueue(int value) {
             Node* newNode = new Node(value);
-            if(length == 0) {
+            if (length == 0) {
                 first = newNode;
                 last = newNode;
             } else {
@@ -83,56 +79,47 @@ class Queue {
             length++;
         }
 
+        int dequeue() {
+            if (length == 0) return INT_MIN;
+            Node* temp = first;
+            int dequeuedValue = first->value;
+            if(length == 1) {
+                first = nullptr;
+                last = nullptr;
+            } else {
+                first = first->next;
+            }
+            delete temp;
+            length--;
+            return dequeuedValue;
+        }
+
 };
 
 
 
 int main() {
         
-    Queue* myQueue = new Queue(1);
+    Queue* myQueue = new Queue(2);
+    myQueue->enqueue(1);
 
-    cout << "Queue before enqueue(2):\n";
-    cout << "------------------------\n";
-    myQueue->printQueue();
-    cout << endl;
+    cout << "Dequeued value: " << myQueue->dequeue();
+    
+    cout << "\n\nDequeued value: " << myQueue->dequeue();
 
-    myQueue->getFirst();
-    myQueue->getLast();
-    myQueue->getLength();
+    cout << "\n\nDequeued value: " << myQueue->dequeue();
 
-    myQueue->enqueue(2);
-
-    cout << "\n\nQueue after enqueue(2):\n";
-    cout << "-----------------------\n";
-    myQueue->printQueue();
-    cout << endl;
-
-    myQueue->getFirst();
-    myQueue->getLast();
-    myQueue->getLength();
 
     /*  
         EXPECTED OUTPUT:
+        ----------------
+        Dequeued value: 2
 
-        Queue before enqueue(2):
-        ------------------------
-        1
+        Dequeued value: 1
 
-        First: 1
-        Last: 1
-        Length: 1
-
-
-        Queue after enqueue(2):
-        -----------------------
-        1
-        2
-
-        First: 1
-        Last: 2
-        Length: 2
+        Dequeued value: -2147483648
 
     */ 
-
+   
 }
 
