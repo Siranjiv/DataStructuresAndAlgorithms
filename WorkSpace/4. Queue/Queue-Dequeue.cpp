@@ -79,6 +79,7 @@ class Queue {
             length++;
         }
 
+        //Function for remove item for a queue
         int dequeue() {
             if (length == 0) return INT_MIN;
             Node* temp = first;
