@@ -1,0 +1,14 @@
+1. Create a new Node
+2. if < go left else if > go right
+3. if nullptr insert newNode else move to next
+
+**UNTIL NODE IS ENTERED REPEAT STEPS 2 AND 3**=>WHILE LOOP
+
+---Pseudocode---
+create newNode
+if root == nullptr then root = newNode
+temp = root
+while loop
+    if newNode == temp return false     //When the new Node is Duplicate then return
+    if < left else > right
+    if nullptr insert newNode else move to next

@@ -1,0 +1,10 @@
+FULL TREE = Every node either points to zero or 2 nodes
+
+PERFECT TREE = any level in the tree that has any nodes
+                is completely filled all the way across
+            *The Bottom nodes should be evenly filled
+
+COMLETE TREE = if the tree is filled with left to right 
+                with no gaps
+
+
