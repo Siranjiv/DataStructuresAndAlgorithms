@@ -1,0 +1,42 @@
+            A
+          /   \
+        E       B
+         \     /
+          D - C
+
+for the graph above to store the adjacenctList an unordered Map is used
+
+key:[Value1,Value2]
+
+{
+    "A":["B","E"]
+    "B":["A","C"]
+    "C":["B","D"]
+    "D":["C","E"]
+    "E":["A","D"]
+}
+
+The unordered Map on the above represents the graph above
+
+
+---Unordered Sets---
+unordered set is like an unordered Map
+
+in unordered map we have something like this
+{
+    1 : true,
+    2 : true,
+    3 : true
+}
+so Unordered Set is similar but it doesn't have value but has the keys
+{
+    1
+    2
+    3
+}
+
+Like an unordered map lookup(), insert() and delete() are O(1)
+
+Also set doen't have duplicates
+and we write the set like this
+[1, 2, 3]
