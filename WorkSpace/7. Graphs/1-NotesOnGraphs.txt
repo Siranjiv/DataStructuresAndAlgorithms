@@ -1,0 +1,28 @@
+--Intro--
+
+The Nodes can be called as vertex(Term used in Graph)
+multiple vertex is called Vertices(plural word)
+
+when connecting Vertices the line can be called EDGE(Most Prefered) or
+CONNECTION
+
+
+In Graphs you can have(not always) weighted edges (the number on the EDGE)
+Eg:- Can be used in maps app to determine the fast road
+Eg2:-Network routing protocol-Better to go in 2 fast line than one slow link
+
+
+Graphs can be Directional or BiDirectional
+Eg1:- when you follow a friend in Social Media then friend follows you back
+      then is BiDirectional
+Eg2:- when you follow Celebrity but Celebrity doesn't follow you back
+      then is Directional
+When no arrows are used it can be conidered as BiDirectional
+
+
+---Extra---
+Tree is also a form of a graph but they have the limitation that each node
+can only point to two other Nodes
+
+A LinkedList is a form of a tree and tree is a form of a graph so LinkedList
+is a form of a Graph with the limitation to point to one other node

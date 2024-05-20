@@ -1,0 +1,5 @@
+hash functions are always **one way** that means the key will produce the value but the value won't produce the key
+hash functions are **Deterministic** eg:- if "books" produce vakue 3 then it will always produce 3 
+
+If key generates for same locations, values shouldn't be overriden it should be added additionally -This situation is COLLISION
+
