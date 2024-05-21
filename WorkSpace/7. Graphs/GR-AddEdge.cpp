@@ -24,13 +24,23 @@ class Graph {
             }
         }
 
-        //Method to add vertex to a graph
         bool addVertex(string vertex) {
-            if(adjList.count(vertex) == 0) { //Check to see if the vertex is already in the Adjacency List
+            if (adjList.count(vertex) == 0) {
                 adjList[vertex];
                 return true;
             }
             return false;
+        }
+
+        //method to add edge to a graph
+        bool addEdge(string vertex1, string vertex2) {
+           // adjList.at(vertex1); // This returns the value in the key value pair
+           if(adjList.count(vertex1) != 0 && adjList.count(vertex2) != 0) { //check to see if vertex 1 and vertex 2 exist
+            adjList.at(vertex1).insert(vertex2);
+            adjList.at(vertex2).insert(vertex1);
+            return true;
+           }
+           return false;
         }
 
 };
@@ -43,18 +53,30 @@ int main() {
 
     myGraph->addVertex("A");
     myGraph->addVertex("B");
-    
-    cout << "Graph:\n";
+
+    cout << "Graph before addEdge(): \n";
+    myGraph->printGraph();
+
+
+    myGraph->addEdge("A", "B");
+
+
+    cout << "\n\nGraph after addEdge(): \n";
     myGraph->printGraph();
 
     /*
         EXPECTED OUTPUT:
         ----------------
-        Graph:
+        Graph before addEdge(): 
         B: [ ]
         A: [ ]
 
-    */ 
-       
+
+        Graph after addEdge(): 
+        B: [ A ]
+        A: [ B ]
+
+    */     
+      
 }
 
