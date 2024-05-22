@@ -1,0 +1,35 @@
+Recursion is a function that calls itself until it doesn't
+
+----PseudoCode--- 
+
+Consider that in side a gift box there may be multiple gift boxes and finally you need to get the ball
+
+Ball* openGiftBox() {
+    if(isBall) return ball;
+    openGiftBox();
+}
+
+
+* if the statement "if(isBall) return ball;" gives false then we open the next giftbox which will be "openGiftBox();"(calling the function itself)
+
+Rules of Recursion
+1. The process of opening each new box is the same -> Doing whatever you're doing has to be the same
+2. Each time we open a box we make the box smaller -> whatever you're doing in Recursion each set should be samller than before
+
+openGiftBox(); calling this function make an instance to the call stack 
+
+the if(isBall) is the *base case* of the function
+when the base case become true we don't need to call the function instance again(it's like a loop breaker)
+
+if we call openGiftBox(); then it's called a recursive case
+
+
+Ball* openGiftBox() {
+    openGiftBox();
+}
+
+here be don't have a base case for the function which means function gives instance of it function continuously
+which results an infinite loop of adding new instance of the function to the call stack -> this is called Stack Overflow
+
+always have a base case that break the looping with the return statement
+if you're getting a Stack Overflow troubleshoot the base case 
