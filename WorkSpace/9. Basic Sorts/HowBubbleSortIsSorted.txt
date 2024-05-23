@@ -1,0 +1,34 @@
+This is how Bubble sort Work for the following array of values
+* We Switch with Whatever the biggest
+
+
+4   2   6   5   1   3   
+2   4   6   5   1   3
+2   4   6   5   1   3
+2   4   5   6   1   3
+2   4   5   1   6   3
+2   4   5   1   3   6   Now 6 is sorted
+
+Whatever the largest item is we bubble it all the way to the top
+it took 5 steps to get the item all the way to the end in the array
+we do the same thing to the rest of the array
+
+2   4   5   1   3   6
+2   4   5   1   3   6
+2   4   5   1   3   6
+2   4   1   5   3   6
+2   4   1   3   5   6   Now 5 is sorted
+
+it's sorted in 4 steps
+
+2   4   1   3   5   6
+2   4   1   3   5   6
+2   1   4   3   5   6
+2   1   3   4   5   6   now 4 is sorted
+
+it's sorted in 3 steps
+
+2   1   3   4   5   6
+1   2   3   4   5   6   
+
+Now Everything is sorted
