@@ -1,0 +1,20 @@
+Since we have nested for loop we have O(n^2) => This is the worst Case
+
+let's check a situation like the array below
+
+1   2   4   3   5   6
+
+this array is almost sorted
+so the the array will be sorted like this
+
+1   2   4   3   5   6
+
+1   2   4   3   5   6
+
+1   2   3   4   5   6
+
+we check the others as well until the end of the array
+
+so only 1 pass was done so this is n complexity not n^2
+
+The other algorithms are later will be fast but they are not going to fast if they are almost sorted data
