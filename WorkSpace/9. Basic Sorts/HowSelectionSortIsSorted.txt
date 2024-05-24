@@ -1,0 +1,53 @@
+This is how SelectionSort sort Work for the following array of values
+* We Switch with the idex of the array
+consider (num) as the index of the array
+
+ 4   2   6   5   1   3
+(0) (1) (2) (3) (4) (5)
+
+we start with the first item and get the index with the lowest item in the array
+
+we will put minIndex = 0 putting the 0th index as minIndex
+we compare minIndex with the next set of indexes in the array one by one and compare then until we get the shortest valued index
+
+so it will go like this  for the above
+
+minIndex = 1 //since 4>2
+then again minIndex = 4  // since 2 > 1
+
+now we swap here, 1 is sorted
+
+ 1   2   6   5   4   3
+(0) (1) (2) (3) (4) (5)
+
+now we look through the 2nd index
+
+minIndex = 1; and we do the same thing
+here we leave it as it is since 2 is smaller than the other index values
+
+ 1   2   6   5   4   3
+(0) (1) (2) (3) (4) (5)
+
+now we look through the 3rd index
+
+minIndex = 2
+minIndex = 3    // since 6 > 5
+minIndex = 4    // since 5 > 4
+minIndex = 5    // since 4 > 3
+
+now we 3rd index sorted so we swap 2nd index with 5(minIndex)
+
+ 1   2   3   5   4   6
+(0) (1) (2) (3) (4) (5)
+
+now we look through the 3th index
+
+minIndex = 3
+minIndex = 4    // since 5 > 4
+
+now we 3rd index sorted so we swap 3nd index with 4(minIndex)
+
+ 1   2   3   4   5   6
+(0) (1) (2) (3) (4) (5)
+
+and later the other looping will be done but with condition they won't be sorted
