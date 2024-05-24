@@ -1,0 +1,56 @@
+This is how Insertion sort Work for the following array of values
+* We always start with the second item and compare it with the item before it
+if it is less that the item we swap it
+
+4   2   6   5   1   3
+
+//we took the second item(2) and checked with the item before[1st item(4)] 
+4 > 2 so we swap
+so we get the below output
+
+2   4   6   5   1   3
+
+now we check 3rd item(6) and checked with the item before[2nd item(4)]
+so we get the below output
+4 > 6 is not true so we don't swap
+
+2   4   6   5   1   3
+
+now we check 4rd item(5) and checked with the item before[3rd item(4)]
+so we get the below output
+6 > 5 so we swap
+
+2   4   5   6   1   3
+
+Then continuously we check the 3rd item(5) and compare with the 2nd item(4)
+4 > 5 is not true so we don't swap
+
+2   4   5   6   1   3
+
+now we check 5rd item(1) and checked with the item before[4th item(6)]
+so we get the below output
+6 > 1
+
+2   4   5   1   6   3
+
+now we continuously sort the reset with the value 1 (previously 5th item)
+
+2   4   1   5   6   3
+
+2   1   4   5   6   3
+
+1   2   4   5   6   3
+
+now we check 6th item(3) and checked with the item before[5th item(6)]
+so we get the below output
+6 > 3
+
+1   2   4   5   3   6
+
+ow we continuously sort the reset with the value 3 (previously 6th item)
+
+1   2   4   3   5   6
+
+1   2   3   4   5   6
+
+the loop will check  1 and 2 and that is all the sorting
