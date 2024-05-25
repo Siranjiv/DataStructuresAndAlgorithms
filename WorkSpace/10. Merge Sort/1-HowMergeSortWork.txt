@@ -1,0 +1,34 @@
+Merge sort is a sorting algorithum that uses recursion
+
+let's say we have an array below
+
+5   4   7   1   3   2   8   6
+
+the merge sort will take this array and cut it in half
+
+    5   4   7   1             3   2   8   6
+
+then the array will cut in half again
+
+    5   4       7   1       3   2      8   6
+
+we keep doing this until we have single item arrays
+
+    5       4       7       1       3       2       8       6
+
+So single item array are by definition sorted
+
+so then what we can do is combine and sort the single item array all the way across
+
+    4   5       1   7       2   3      6   8
+
+    1   4   5   7             2   3   6   8   
+
+    Then we take the about two and make 1 big sorted array out of these
+
+1   2   3   4   5   6   7   8
+
+
+This is actually a efficient sorting algorithum
+
+*There will be 2 function that we will be using 1 called merge and the other called mergeSort*
