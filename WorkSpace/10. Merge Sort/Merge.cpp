@@ -21,7 +21,7 @@ int main() {
     int midIndex = (size / 2) - 1;
 
 
-    merge(myArray, leftIndex, midIndex, rightIndex);
+   // merge(myArray, leftIndex, midIndex, rightIndex);
 
 
     for (auto value : myArray) {  
