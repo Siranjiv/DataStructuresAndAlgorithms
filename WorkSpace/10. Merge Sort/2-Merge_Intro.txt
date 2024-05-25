@@ -54,7 +54,7 @@ here we compare i and j then we find the one with the lowest value and we are go
     ^
     i
 
-we do this until one array is empty so the array j is empty to we will break out of that loop
+we do this until one array is empty so the array j is empty that means we will break out of that loop
 
 for the remaining items we will be using a seperate loop
 
