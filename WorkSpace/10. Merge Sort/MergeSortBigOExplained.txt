@@ -1,0 +1,85 @@
+Let's Consider the following array
+
+    1   2   3   4   5   6   7   8
+
+--The Space Complexity--
+
+With mergeSort we need to make new arrays as they are broken in halfs they take much space
+in memory as the original array
+
+so Space Complexity is O(n)
+
+--The Time Complexity--
+
+Inital idead => O(n*log n + n)
+
+so the + n is Consider non dominant so we drop the non dominance
+and we are left with the following
+
+O(n*log n)
+
+More Explanation Below
+
+O(n*log n + n)
+ 
+for the "+ n" part when we split the array is halfs let's count the number of times that we do this
+
+1   2   3   4   5   6   7   8
+
+1   2   3   4        5   6   7   8  => 1
+
+1   2       3   4       5   6   7   8   => 2
+
+1   2       3   4       5   6       7   8   => 3
+
+1       2       3   4       5   6       7   8   =>  4
+
+1       2       3       4       5   6       7   8   =>  5
+
+1       2       3       4       5       6       7   8   =>  6
+
+1       2       3       4       5       6       7       8   =>  7
+
+
+So it took 7 steps to break the array in halfs and the value of n is 8
+so the number of splits is approximately " n " so  the " + n " is non dominant so we will drop this
+Giving the final =>
+
+        O(n*log n)
+    Here the n*logn happens when we put everything back together
+
+    n in this case based on the above example is 8 so we're going to touch all 8 of these items
+    log n times
+
+1       2       3       4       5       6       7       8
+
+Here when we combine 2 times eg:- 1 and 2, think of the merge function
+the while loop in that function has to touch every value
+
+so in order to get the result below we have to touch all n items
+
+1   2       3   4       5   6       7   8   => n items touched
+
+same thing happens again when we combine as we have to touch all items
+
+1   2   3   4        5   6   7   8   => n items touched
+
+same thing again to get the final result
+
+1   2   3   4   5   6   7   8    => n items touched
+
+
+so based on the above working we touched all the n items 3 times
+
+    log 8 = 3 (log base 2 of 8 = 3)
+
+so here we when you think when we touched all 8 times 3 times we get the following below
+
+    8   *   3       which is 
+    n   *   log n
+
+    that gives us O(n*log n)
+
+
+NOTE=> So the 3 Basic Sorting algorithums in time Complexity were O(n^2)
+    so since O(n*log n) is lesser than O(n^2) this algorithum is more efficient
