@@ -1,0 +1,64 @@
+Let's take the following array included with indexes (num)
+
+    5   4   7   1   3   2   8   6
+   (0) (1) (2) (3) (4) (5) (6) (7)
+
+So merge sort will take this array and cut it in half
+It does this by taking a smaller range of the array
+but we are still dealing with the original array
+it's just a smaller range of indexes
+
+    5   4   7   1            3   2   8   6
+   (0) (1) (2) (3)          (4) (5) (6) (7)
+
+Then we will break the above array again in half
+
+    5   4        7   1         3   2       8   6
+   (0) (1)      (2) (3)       (4) (5)     (6) (7)
+
+   then we break the remaining pair in half as well
+
+    5    4    7    1    3    2    8    6
+   (0)  (1)  (2)  (3)  (4)  (5)  (6)  (7)
+
+
+   So merge sort will break the array in half and then
+   keeps on breaking the sub arrays in half intil each gets
+   one item
+
+   Then mergeSort will call the MERGE() helper function to take
+   two items and sort them
+   So this will give the following result
+
+    4   5        1   7         2   3       6   8
+   (0) (1)      (2) (3)       (4) (5)     (6) (7)
+
+   Since these are sorted arrays we can take the 2 pair of the
+   above arrays and combine them giving the following result
+
+    1   4   5   7            2   3   6   8
+   (0) (1) (2) (3)          (4) (5) (6) (7)
+
+   then again we call the merge on these 2 sorted arrays
+   and combine them into 1 sorted array
+
+    1   2   3   4   5   6   7   8
+   (0) (1) (2) (3) (4) (5) (6) (7)
+
+
+
+   ------Summary of what mergeSort do------
+
+   hint-> Requirements of recurition
+            i) Do the same thing over and over
+           ii)Make the Problem smaller
+
+   1) breaks arrays in half(it does this recursively)
+   2) Base case: when sub-array size is 1
+
+   Make the sub arrays smaller and smaller
+     *Until we reach the base case
+     
+   3)Calls merge() to put sub-arrays together
+    This is done once we reach the base case
+     
