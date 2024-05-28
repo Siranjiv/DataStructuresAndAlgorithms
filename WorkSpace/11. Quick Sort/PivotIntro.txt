@@ -1,0 +1,125 @@
+Pivot is a helper function for quickSort
+
+Let's take the follow ing array,
+
+4   6   1   7   3   2   5
+
+What the pivot function is going to do is this -> consider ^ as the pointer and P as the pivot
+
+4   6   1   7   3   2   5
+^
+p
+
+it's going to sort the following,
+
+4   1   3   2   6   7   5
+^
+p
+
+and do the swap and give the following result
+
+2   1   3   4   6   7   5       =>It swapped with the smallest value
+
+Now we'll go through the detailed version of the explanaion
+
+consider the following variables,
+i and s(swap variable)
+
+4   6   1   7   3   2   5
+^   ^
+p   i
+s
+
+we have the Pivot point p at the 1st index
+we have i to loop through the next item over
+we then have another one called swap which is current at the pivot point but will move
+
+4   6   1   7   3   2   5       Here i is moved since 4 < 6 so nothing to do here
+^       ^
+p       i
+s
+
+Now 4 > 1 so we will move the swap variable to the first largest
+
+4   6   1   7   3   2   5
+^   ^   ^
+p   s   i
+
+Then we will use the swap variable to exchange with the index
+
+4   1   6   7   3   2   5
+^   ^   ^
+p   s   i
+
+Then i will move to the next item
+
+4   1   6   7   3   2   5   Here i is moved since 4 < 7 so nothing to do here
+^   ^       ^
+p   s       i
+
+Then i will move to the next item
+
+4   1   6   7   3   2   5
+^   ^           ^
+p   s           i
+
+
+Now 4 > 3 so we will move the swap variable to the first largest
+
+4   1   6   7   3   2   5   
+^       ^       ^
+p       s       i
+
+Then we will use the swap variable to exchange with the index
+
+4   1   3   7   6   2   5   
+^       ^       ^
+p       s       i
+
+Then i will move to the next item
+
+4   1   3   7   6   2   5   
+^       ^           ^
+p       s           i
+
+
+Now 4 > 2 so we will move the swap variable to the first largest
+
+4   1   3   7   6   2   5   
+^           ^       ^
+p           s       i
+
+Then we will use the swap variable to exchange with the index
+
+4   1   3   2   6   7   5   
+^           ^       ^
+p           s       i
+
+Then i will move to the next item
+
+4   1   3   2   6   7   5   Here i is moved since 4 < 5 so nothing to do here
+^           ^           ^
+p           s           i
+
+
+now the loop is complete so we don't need the i variable now
+
+4   1   3   2   6   7   5
+^           ^
+p           s
+
+
+So now the thing we need to do is swap the 2 items and we are done with the pivot variable
+
+2   1   3   4   6   7   5
+            ^
+            s
+
+Usually we return this array at the end of the function but that is not what we will do here
+what we RETURN here is the SWAP VARIABLE
+
+because when we run quickSort sort for the left side array ( 2  1  3 ), we are going to run
+with the index of zero through swap - 1
+
+when we run quickSort sort for the right side array ( 6  7  5 ), we are going to run
+with the index of swap + 1 through end of the array
