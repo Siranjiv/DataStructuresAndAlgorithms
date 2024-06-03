@@ -1,0 +1,8 @@
+
+           47
+          /   \
+        21      76
+      /  \     /  \
+     18  27   52   82
+
+We will use the following to understand BreathFirstSearch(BFS)
