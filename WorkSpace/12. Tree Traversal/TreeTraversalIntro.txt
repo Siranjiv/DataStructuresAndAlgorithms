@@ -4,3 +4,22 @@
         21      76
       /  \     /  \
      18  27   52   82
+
+     The above is the traversal of a Binary Search Tree
+     traversal-> going to visit each node
+
+     There are ways to visit each node
+
+     Eg:- we can do it row by row 
+
+    So we start from the top and print values from next row to next giving the order like this
+
+    47 -> 21 -> 76 -> 18 -> 27 -> 52 -> 82
+
+    This is an example of Breath First Search (BFS)
+
+    Another method of doing it is from the bottom left node to top node then to right node giving the order like this
+
+    18 -> 21 -> 27 -> 47 -> 52 -> 76 -> 82
+
+    This is an example of Depth First Search (DFS)
