@@ -62,3 +62,35 @@ We will use the following to understand BreathFirstSearch(BFS)
 
     queue [18, 27]
     results [47, 21, 76] 
+
+  Now from 76 we check if we have node on left and we do which is 52, So we add that to the Queue
+
+    queue [18, 27, 52]
+    results [47, 21, 76]
+
+  Now from 76 we check if we have node on right and we do which is 82, So we add that to the Queue
+
+    queue [18, 27, 52, 82]
+    results [47, 21, 76]
+
+  Now we checked left and right of 76, now we can Deque 18
+
+    queue [27, 52, 82]
+    results [47, 21, 76, 18]
+
+  18 doesn't have anything on the left or the right so we deque 27
+
+    queue [52, 82]
+    results [47, 21, 76, 18, 27]
+
+  27 doesn't have anything on the left or the right so we deque 52
+
+    queue [82]
+    results [47, 21, 76, 18, 27, 52]
+
+  52 doesn't have anything on the left or the right so we deque 82
+
+    queue []
+    results [47, 21, 76, 18, 27, 52, 82]
+
+So now we have all values to the result
