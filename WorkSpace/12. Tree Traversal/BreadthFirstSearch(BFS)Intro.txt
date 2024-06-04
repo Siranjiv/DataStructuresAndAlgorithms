@@ -6,3 +6,59 @@
      18  27   52   82
 
 We will use the following to understand BreathFirstSearch(BFS)
+
+  So we start from the top and print values from next row to next giving the order like this
+
+  47 -> 21 -> 76 -> 18 -> 27 -> 52 -> 82
+
+
+  ---The PheudoCode---
+
+  1) First we are going to have a queue[] and an arrayList called results[]
+  2) In the queue[] we are going to store the Nodes
+  3) When needed we will deque the value and store it in results[]
+
+  the we repeat 2) and 3) when reading the Tree row by row
+
+
+  The Process is based on the above Tree
+
+
+  queue [47]
+  results []
+
+  We Will Deque and store the value in results
+
+    queue []
+    results [47]
+
+  So from the 47 Node we are going to the left which is the 21 Node
+  and we Store that in the Queue
+
+    queue [21]
+    results [47]
+
+  and from the 47 to the right we have 76 Node so then we put that to the queue
+
+    queue [21, 76]
+    results [47]   
+
+  Now we Deque 21 and put the value in the results
+
+    queue [76]
+    results [47, 21]
+  
+  Now from 21 we check if we have node on left and we do which is 18, So we add that to the Queue
+
+    queue [76, 18]
+    results [47, 21]
+
+  Now from 21 we check if we have node on right and we do which is 27, So we add that to the Queue
+
+    queue [76, 18, 27]
+    results [47, 21]
+
+  Now we checked left and right of 21, now we can Deque 76
+
+    queue [18, 27]
+    results [47, 21, 76] 
