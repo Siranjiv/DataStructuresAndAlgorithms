@@ -84,14 +84,18 @@ class BinarySearchTree {
 
 		void BFS() {
             queue<Node*> myQueue;
-            myQueue.push(root);
+            myQueue.push(root);//This is needed or the below condition would become false
 
             //This condition will run until the queue is empty
             while (myQueue.size() > 0) {
                 Node* currentNode = myQueue.front();
+                myQueue.pop();
                 cout << currentNode->value << " ";
-                if(currentNode->left != nullptr) {  //
-
+                if(currentNode->left != nullptr) {  //This checks if there is a node in the left
+                    myQueue.push(currentNode->left);
+                }
+                if(currentNode->right != nullptr) { //This checks if there is a node in the left
+                    myQueue.push(currentNode->right);
                 }
             }
 
