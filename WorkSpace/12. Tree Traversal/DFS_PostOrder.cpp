@@ -124,6 +124,7 @@ class BinarySearchTree {
             cout<< currentNode->value << " ";//This is the only change to make from preOrder to postOrder
         }
 
+        //we do the same overload as preOrder
         void DFSPostOrder() { DFSPostOrder(root); }
 
 };
