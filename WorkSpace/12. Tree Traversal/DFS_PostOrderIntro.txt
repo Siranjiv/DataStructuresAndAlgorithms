@@ -1,0 +1,56 @@
+
+           47
+          /   \
+        21      76
+      /  \     /  \
+     18  27   52   82
+
+
+     In post order we start with the root but don't printout the value we just visit the node
+
+     we keep on visiting the left until the end from the root node
+
+     So when we reach 18 node, the 18 node look left and right and then print the value
+
+     18
+
+    then up go a node up where we arrive to the 21 node, then we look right and we have 27 so we go to the 27 node
+
+
+    So when we reach 27 node, the 27 node look left and right and then print the value
+
+    18 -> 27
+
+    then up go a node up where we arrive to the 21 node, since it went both left and right it will print it's value
+
+    18 -> 27 -> 21
+
+
+    then up go a node up where we arrive to the 47 node, then we look right and we have 76 so we go to the 76 node
+
+    the 76 node will look left and go to the 52 node
+
+    So when we reach 52 node, the 52 node look left and right and then print the value
+
+    18 -> 27 -> 21 -> 52
+
+    then up go a node up where we arrive to the 76 node, then we look right and we have 82 so we go to the 82 node
+
+    So when we reach 82 node, the 82 node look left and right and then print the value
+
+    18 -> 27 -> 21 -> 52 -> 82
+
+    then up go a node up where we arrive to the 76 node, since it went both left and right it will print it's value
+
+    18 -> 27 -> 21 -> 52 -> 82 -> 76
+
+    then up go a node up where we arrive to the 47 node, since it went both left and right it will print it's value
+
+    18 -> 27 -> 21 -> 52 -> 82 -> 76 -> 47
+
+
+    So this is the final Result
+
+
+
+
