@@ -4,3 +4,26 @@
       /  \     /  \
      18  27   52   82
 
+For DFS PreOrder the order that we will arrange in the array list will be like this
+
+we start from the top and keep moving to the left
+
+47 -> 21 -> 18
+
+Then we come back to the 21 then look at the right
+47 -> 21 -> 18 -> 27
+
+Now we looked at everything at the left of 47
+so we will look through the right and we have 76
+
+47 -> 21 -> 18 -> 27 -> 76
+
+after the 76 we always go left (which gives us 52)
+
+47 -> 21 -> 18 -> 27 -> 76 -> 52
+
+then comeback again to 76 then go to 82 
+
+47 -> 21 -> 18 -> 27 -> 76 -> 52 -> 82
+
+This is the order of the result in the array list
