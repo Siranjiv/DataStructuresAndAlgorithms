@@ -1,0 +1,56 @@
+           47
+          /   \
+        21      76
+      /  \     /  \
+     18  27   52   82
+
+
+For depth first search we start from the root which is 47
+
+then we keep on visiting left which becomes the 21 node then the 18 node
+
+so far this is similar to DFS post order but this has a small change with post order
+
+So here is the 18 node we are looking for left then print out the value then we look right
+
+18
+
+then we come up to the 21 node, since it looked left, it will now print the value
+
+18 -> 21
+
+Now it 21 node will look right and go to the 27 node
+
+then the 27 node looks left and since there is nothing it will now print the value
+
+18 -> 21 -> 27
+
+now 27 will looks right since there is nothing then it goes a node up to 21,
+since 21 looked right it will go a node up again to the 47 node
+
+Since 47 looked left, it will print it's value
+
+18 -> 21 -> 27 -> 47
+
+now 47 will look right and move to 76 node
+
+Here the 76 node will go left which will give 52
+
+So here is the 52 node we are looking for left then print out the value then we look right
+
+18 -> 21 -> 27 -> 47 -> 52
+
+
+then we come up to the 76 node, since it looked left, it will now print the value
+
+18 -> 21 -> 27 -> 47 -> 52 -> 76
+
+Now it 76 node will look right and go to the 82 node
+
+then the 82 node looks left and since there is nothing it will now print the value
+
+18 -> 21 -> 27 -> 47 -> 52 -> 76 -> 82
+
+---So if you just think and look at the above order of the number, It is in order--
+
+Hense the name DFS InOrder
